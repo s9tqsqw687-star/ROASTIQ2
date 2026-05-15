@@ -1,4 +1,7 @@
 export type RoastLevel = "light" | "medium" | "medium-dark" | "dark";
+export type BehmorPreset = "P1" | "P2" | "P3" | "P4" | "P5" | "manual";
+export type BehmorBatchSize = "0.25" | "0.5" | "1";
+export type BehmorDrumSpeed = "low" | "high";
 
 export interface Bean {
   id: string;
@@ -26,5 +29,13 @@ export interface Roast {
   duration_min: number | null;
   notes: string | null;
   created_at: string;
+  // Behmore-specific fields
+  preset: BehmorPreset | null;
+  batch_size_lb: BehmorBatchSize | null;
+  drum_speed: BehmorDrumSpeed | null;
+  first_crack_min: number | null;
+  second_crack_min: number | null;
+  bean_temp_f: number | null;
+  exhaust_temp_f: number | null;
   beans?: Pick<Bean, "id" | "name" | "origin">;
 }

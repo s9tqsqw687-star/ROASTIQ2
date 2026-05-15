@@ -2,13 +2,14 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { LayoutDashboard, Coffee, Bean } from "lucide-react";
+import { LayoutDashboard, Coffee, Bean, BarChart2 } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const navItems = [
   { href: "/dashboard", label: "Dashboard", icon: LayoutDashboard },
   { href: "/roasts", label: "Roasts", icon: Coffee },
   { href: "/beans", label: "Beans", icon: Bean },
+  { href: "/analytics", label: "Analytics", icon: BarChart2 },
 ];
 
 export default function BottomNav() {
